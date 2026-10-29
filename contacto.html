@@ -24,7 +24,8 @@
     <h2>Información de contacto</h2>
     <p>Estamos para atender tus consultas y ayudarte con tus pedidos.</p>
     
-<form>
+<form action="enviar.php" method="post" class="formulario">
+
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" required>
 
@@ -32,11 +33,11 @@
     <input type="email" id="correo" name="correo" required>
 
     <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" required></textarea>
+    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
     <button type="submit">Enviar</button>
-</form>
 
+</form>
 
     <h2>Horario de atención</h2>
     <p>Consulta nuestro horario para conocer cuándo puedes visitarnos.</p>
