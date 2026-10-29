@@ -84,3 +84,39 @@ footer {
     margin: 1%;
     border-radius: 10px;
 }
+
+/* Menú hamburguesa */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburguesa span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+.menu ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
