@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laboratorio HTML y CSS | Café Aroma</title>
+<style>
+:root{--cafe:#5b3825;--oscuro:#382216;--crema:#fff8ef;--dorado:#d9a45b;--texto:#302820}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--crema);color:var(--texto);line-height:1.6}
+header{background:linear-gradient(120deg,var(--oscuro),var(--cafe));color:white;text-align:center;padding:28px 18px}
+header h1{margin:0 0 8px;font-size:clamp(1.8rem,4vw,2.6rem)}header p{margin:0;color:#f5dfc5}
+.contenedor{width:min(1100px,92%);margin:28px auto}.intro,.panel,.tarjeta{background:white;border-radius:14px;padding:22px;margin-bottom:20px;box-shadow:0 8px 24px #38221618}
+.intro{border-left:6px solid var(--dorado)}h2,h3{color:var(--cafe)}
+.pestanas{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.pestanas button,.boton{border:0;border-radius:8px;background:var(--cafe);color:white;padding:11px 17px;font-weight:bold;cursor:pointer}
+.pestanas button:hover,.boton:hover{background:var(--oscuro)}.pestanas button.activa{background:var(--dorado);color:#2c1b10}
+.seccion{display:none}.seccion.activa{display:block}.campo{width:100%;padding:11px;border:1px solid #d8c8b8;border-radius:8px;font:inherit;margin:8px 0 14px}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.tarjeta{margin:0;box-shadow:none;border:1px solid #eadccd}
+code{background:#f4eee7;color:#7b3f20;padding:2px 5px;border-radius:4px}.ejemplo{background:#fbf5ed;border-left:4px solid var(--dorado);padding:12px;border-radius:7px;margin-top:10px}
+.editor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+textarea{width:100%;min-height:230px;resize:vertical;border:1px solid #cdbba8;border-radius:9px;padding:12px;font:14px/1.5 Consolas,monospace;background:#211d1a;color:#f7eadb}
+iframe{width:100%;min-height:280px;border:1px solid #d8c8b8;border-radius:9px;background:white}
+.resultado-css{min-height:110px;padding:18px;border:2px dashed var(--dorado);border-radius:10px;background:#fffaf4;text-align:center}
+.nota{color:#6d6258;font-size:.94rem}footer{text-align:center;padding:22px;background:var(--oscuro);color:#f5dfc5;margin-top:35px}
+@media(max-width:600px){.contenedor{width:94%}.intro,.panel{padding:16px}.pestanas button{flex:1 1 100%}}
+</style>
+</head>
+<body>
+<header><h1>Laboratorio de HTML y CSS</h1><p>Aprende, practica y experimenta con el desarrollo web</p></header>
+<main class="contenedor">
+<section class="intro"><h2>Bienvenido al laboratorio</h2><p>Este espacio reúne ejemplos de etiquetas HTML, conceptos básicos de CSS y un taller para escribir código y observar el resultado. Explora cada sección y prueba tus propios cambios.</p><p class="nota">Esta práctica funciona de forma independiente y no modifica las demás páginas de Café Aroma.</p></section>
+<nav class="pestanas" aria-label="Secciones del laboratorio"><button class="activa" data-seccion="html">Etiquetas HTML</button><button data-seccion="css">CSS básico</button><button data-seccion="taller">Taller libre</button></nav>
+
+<section id="html" class="seccion activa"><div class="panel"><h2>1. Etiquetas HTML</h2><p>HTML organiza el contenido de una página web mediante etiquetas. Busca una etiqueta para conocer su función.</p>
+<label for="buscar"><strong>Buscar etiqueta:</strong></label><input class="campo" id="buscar" type="search" placeholder="Ejemplo: imagen, enlace, tabla...">
+<div class="rejilla" id="lista">
+<article class="tarjeta" data-key="h1 titulo encabezado"><h3><code>&lt;h1&gt;</code> Título principal</h3><p>Define el encabezado más importante.</p><div class="ejemplo"><h1 style="margin:0">Mi primer título</h1></div></article>
+<article class="tarjeta" data-key="h2 h3 h4 h5 h6 subtitulo"><h3><code>&lt;h2&gt; ... &lt;h6&gt;</code></h3><p>Representan subtítulos de diferentes niveles.</p><div class="ejemplo"><h2 style="margin:0">Un subtítulo</h2></div></article>
+<article class="tarjeta" data-key="p parrafo texto"><h3><code>&lt;p&gt;</code> Párrafo</h3><p>Se utiliza para escribir bloques de texto.</p><div class="ejemplo">Este es un párrafo de ejemplo.</div></article>
+<article class="tarjeta" data-key="a enlace link hipervinculo"><h3><code>&lt;a&gt;</code> Enlace</h3><p>Permite navegar a otra página o dirección mediante <code>href</code>.</p><div class="ejemplo"><a href="#html">Visitar una sección</a></div></article>
+<article class="tarjeta" data-key="img imagen foto"><h3><code>&lt;img&gt;</code> Imagen</h3><p>Muestra una imagen. Utiliza los atributos <code>src</code> y <code>alt</code>.</p><div class="ejemplo"><code>&lt;img src="foto.jpg" alt="Descripción"&gt;</code></div></article>
+<article class="tarjeta" data-key="ul ol li lista"><h3><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></h3><p>Crean listas con viñetas o numeradas.</p><div class="ejemplo"><ul><li>Café</li><li>Pan</li></ul></div></article>
+<article class="tarjeta" data-key="table tr th td tabla"><h3><code>&lt;table&gt;</code></h3><p>Organiza información en filas y columnas con <code>tr</code>, <code>th</code> y <code>td</code>.</p><div class="ejemplo"><table border="1" cellpadding="5"><tr><th>Producto</th><th>Precio</th></tr><tr><td>Café</td><td>₡1500</td></tr></table></div></article>
+<article class="tarjeta" data-key="form input label button formulario"><h3><code>&lt;form&gt;</code></h3><p>Agrupa controles para recopilar información, como <code>label</code> e <code>input</code>.</p><div class="ejemplo"><label>Nombre: <input placeholder="Tu nombre"></label></div></article>
+<article class="tarjeta" data-key="header encabezado"><h3><code>&lt;header&gt;</code></h3><p>Representa la cabecera de una página o sección.</p></article>
+<article class="tarjeta" data-key="nav navegacion menu"><h3><code>&lt;nav&gt;</code></h3><p>Contiene enlaces de navegación.</p></article>
+<article class="tarjeta" data-key="main principal"><h3><code>&lt;main&gt;</code></h3><p>Identifica el contenido principal del documento.</p></article>
+<article class="tarjeta" data-key="section seccion"><h3><code>&lt;section&gt;</code></h3><p>Agrupa contenido relacionado.</p></article>
+<article class="tarjeta" data-key="article articulo"><h3><code>&lt;article&gt;</code></h3><p>Representa contenido independiente, como una publicación.</p></article>
+<article class="tarjeta" data-key="aside lateral"><h3><code>&lt;aside&gt;</code></h3><p>Contiene información complementaria.</p></article>
+<article class="tarjeta" data-key="footer pie"><h3><code>&lt;footer&gt;</code></h3><p>Representa el pie de página o de una sección.</p></article>
+<article class="tarjeta" data-key="div span contenedor"><h3><code>&lt;div&gt;</code> y <code>&lt;span&gt;</code></h3><p>Son contenedores genéricos para agrupar contenido.</p></article>
+</div><p id="sin" class="nota" hidden>No se encontraron etiquetas con esa búsqueda.</p></div></section>
+
+<section id="css" class="seccion"><div class="panel"><h2>2. CSS básico</h2><p>CSS permite dar estilo a los elementos HTML: colores, tamaños, espacios, bordes y distribución.</p><div class="rejilla">
+<article class="tarjeta"><h3>Selector y color</h3><p>El selector indica qué elemento se modifica. <code>color</code> cambia el color del texto.</p><div class="ejemplo"><code>p { color: brown; }</code></div></article>
+<article class="tarjeta"><h3>Tipografía</h3><p><code>font-family</code> cambia el tipo de letra y <code>font-size</code> su tamaño.</p><div class="ejemplo"><code>h2 { font-size: 24px; }</code></div></article>
+<article class="tarjeta"><h3>Fondo y bordes</h3><p><code>background-color</code> establece el fondo y <code>border</code> agrega un borde.</p><div class="ejemplo"><code>div { border: 1px solid #333; }</code></div></article>
+<article class="tarjeta"><h3>Modelo de caja</h3><p>Incluye contenido, relleno (<code>padding</code>), borde y margen (<code>margin</code>).</p><div class="ejemplo" style="padding:12px;border:3px solid #b77a40;margin:8px">Contenido dentro de la caja</div></article>
+<article class="tarjeta"><h3>Flexbox</h3><p><code>display: flex</code> facilita distribuir elementos en filas o columnas.</p><div class="ejemplo" style="display:flex;justify-content:space-around"><span>Uno</span><span>Dos</span><span>Tres</span></div></article>
+<article class="tarjeta"><h3>Unidades</h3><p><code>px</code> representa píxeles, <code>%</code> es relativo al contenedor y <code>rem</code> al tamaño de letra raíz.</p></article>
+</div></div>
+<div class="panel"><h3>Prueba algunas propiedades CSS</h3><p>Modifica los controles y observa el resultado.</p>
+<label for="color">Color del texto</label><select class="campo" id="color"><option value="#5b3825">Café</option><option value="#2563a6">Azul</option><option value="#287447">Verde</option><option value="#a83232">Rojo</option></select>
+<label for="tamano">Tamaño del texto: <span id="valor">20</span> px</label><input class="campo" id="tamano" type="range" min="14" max="32" value="20">
+<label for="fondo">Color de fondo</label><select class="campo" id="fondo"><option value="#fffaf4">Crema</option><option value="#f3e1ce">Beige</option><option value="#e5edf7">Azul claro</option><option value="#e3f1e7">Verde claro</option></select>
+<div class="resultado-css" id="muestra">¡Estoy practicando CSS!</div></div></section>
+
+<section id="taller" class="seccion"><div class="panel"><h2>3. Taller libre</h2><p>Escribe o modifica el código HTML y CSS. Presiona <strong>Ejecutar código</strong> para ver el resultado.</p>
+<div class="editor-grid"><div><h3>Código HTML</h3><textarea id="htmlCode" spellcheck="false"><h1>Mi página de práctica</h1>
+<p>Estoy aprendiendo HTML y CSS.</p>
+<button>Mi primer botón</button></textarea></div>
+<div><h3>Código CSS</h3><textarea id="cssCode" spellcheck="false">body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #5b3825;
+}
+h1 { color: #9a5b2e; }
+button {
+  background: #5b3825;
+  color: white;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+}</textarea></div></div>
+<p><button class="boton" id="ejecutar">Ejecutar código</button> <button class="boton" id="reset">Restablecer ejemplo</button></p><h3>Vista previa</h3><iframe id="preview" title="Vista previa del código"></iframe><p class="nota">Puedes probar títulos, párrafos, listas, botones e imágenes con una dirección válida.</p></div></section>
+</main>
+<footer><p>Laboratorio HTML y CSS | Proyecto Café Aroma</p></footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".pestanas button");
+    const sections = document.querySelectorAll(".seccion");
+
+    tabs.forEach(function (button) {
+        button.addEventListener("click", function () {
+            tabs.forEach(function (tab) { tab.classList.remove("activa"); });
+            sections.forEach(function (section) { section.classList.remove("activa"); });
+            button.classList.add("activa");
+            const target = document.getElementById(button.dataset.seccion);
+            if (target) target.classList.add("activa");
+        });
+    });
+
+    const search = document.getElementById("buscar");
+    const cards = document.querySelectorAll("#lista .tarjeta");
+    const noResults = document.getElementById("sin");
+
+    search.addEventListener("input", function () {
+        let found = 0;
+        const term = search.value.toLowerCase().trim();
+        cards.forEach(function (card) {
+            const content = (card.innerText + " " + card.dataset.key).toLowerCase();
+            const visible = content.includes(term);
+            card.hidden = !visible;
+            if (visible) found++;
+        });
+        noResults.hidden = found !== 0;
+    });
+
+    const color = document.getElementById("color");
+    const size = document.getElementById("tamano");
+    const background = document.getElementById("fondo");
+    const sample = document.getElementById("muestra");
+    const sizeValue = document.getElementById("valor");
+
+    function updateCssExample() {
+        sample.style.color = color.value;
+        sample.style.fontSize = size.value + "px";
+        sample.style.backgroundColor = background.value;
+        sizeValue.textContent = size.value;
+    }
+
+    color.addEventListener("change", updateCssExample);
+    background.addEventListener("change", updateCssExample);
+    size.addEventListener("input", updateCssExample);
+    updateCssExample();
+
+    const htmlEditor = document.getElementById("htmlCode");
+    const cssEditor = document.getElementById("cssCode");
+    const preview = document.getElementById("preview");
+    const initialHTML = htmlEditor.value;
+    const initialCSS = cssEditor.value;
+
+    function runCode() {
+        const previewDocument =
+            "<!DOCTYPE html>" +
+            '<html lang="es">' +
+            "<head>" +
+            '<meta charset="UTF-8">' +
+            '<meta name="viewport" content="width=device-width, initial-scale=1.0">' +
+            "<style>" + cssEditor.value + "</style>" +
+            "</head>" +
+            "<" + "body>" + htmlEditor.value + "<" + "/body>" +
+            "<" + "/html>";
+        preview.srcdoc = previewDocument;
+    }
+
+    document.getElementById("ejecutar").addEventListener("click", runCode);
+    document.getElementById("reset").addEventListener("click", function () {
+        htmlEditor.value = initialHTML;
+        cssEditor.value = initialCSS;
+        runCode();
+    });
+
+    runCode();
+});
+</script>
+</body>
+</html>

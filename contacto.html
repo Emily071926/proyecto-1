@@ -1,59 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Café Aroma</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ponte en contacto con Café Aroma.">
+  <title>Contacto | Café Aroma</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header>
-    <h1>Cafetería Café Aroma</h1>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
+  <header class="header">
+    <a class="logo" href="index.html">Café Aroma</a>
+    <button class="hamburguesa" id="btnMenu" type="button" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu" aria-label="Menú principal">
+      <a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="servicios.html">Servicios</a><a href="contacto.html" aria-current="page">Contacto</a>
     </nav>
-</header>
-<main>
-    <h1>Contáctanos</h1>
-    <p>Gracias por visitar Café Aroma.</p>
-
-    <h2>Información de contacto</h2>
-    <p>Estamos para atender tus consultas y ayudarte con tus pedidos.</p>
-    
-<form action="enviar.php" method="post" class="formulario">
-
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-
-    <label for="correo">Correo electrónico:</label>
-    <input type="email" id="correo" name="correo" required>
-
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-    <button type="submit">Enviar</button>
-
-</form>
-
-    <h2>Horario de atención</h2>
-    <p>Consulta nuestro horario para conocer cuándo puedes visitarnos.</p>
-
-    <h2>Visítanos</h2>
-    <p>Será un gusto recibirte y compartir contigo una buena taza de café.</p>
-
-    <a href="index.html">Volver al inicio</a>
-    
-</main>
-
-<footer>
-    <p><strong>Cafetería Café Aroma</strong></p>
-    <p>Teléfono: Por agregar | Correo: Por agregar</p>
-    <p>&copy; 2026 Café Aroma. Todos los derechos reservados.</p>
-</footer>
-
+  </header>
+  <main>
+    <section class="pagina-encabezado contenedor"><p class="etiqueta">Estamos para ayudarte</p><h1>Contáctanos</h1><p>Gracias por visitar Café Aroma. Nos encantará conocer tus consultas y comentarios.</p></section>
+    <section class="contenido-pagina contenedor contacto-grid">
+      <div><h2>Información de contacto</h2><p>Puedes utilizar el formulario para escribirnos. Los datos de teléfono y correo quedan pendientes de completar con la información real del negocio.</p><div class="dato-contacto"><strong>Teléfono:</strong> Por agregar</div><div class="dato-contacto"><strong>Correo:</strong> Por agregar</div><div class="dato-contacto"><strong>Horario:</strong> Por confirmar</div></div>
+      <form class="formulario" action="#" method="get">
+        <label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+        <label for="correo">Correo electrónico</label><input id="correo" name="correo" type="email" placeholder="tunombre@correo.com" required>
+        <label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu consulta" required></textarea>
+        <button class="boton" type="submit">Enviar consulta</button>
+        <p class="nota-formulario">Formulario de demostración; no envía mensajes a un servidor.</p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer"><div class="footer-contenedor contenedor"><div><a class="logo logo-footer" href="index.html">Café Aroma</a><p>Café, postres y buenos momentos.</p></div><div class="redes"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></div><p class="copyright">© 2026 Café Aroma. Todos los derechos reservados.</p></div></footer>
 </body>
 </html>

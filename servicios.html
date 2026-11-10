@@ -1,44 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios | Café Aroma</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce las bebidas y postres de Café Aroma.">
+  <title>Servicios | Café Aroma</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-    
-<header>
-    <h1>Cafetería Café Aroma</h1>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
+  <header class="header">
+    <a class="logo" href="index.html">Café Aroma</a>
+    <button class="hamburguesa" id="btnMenu" type="button" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu" aria-label="Menú principal">
+      <a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="servicios.html" aria-current="page">Servicios</a><a href="contacto.html">Contacto</a>
     </nav>
-</header>
-
-<main>
-
-    <h1>Nuestros servicios</h1>
-    <p>En Café Aroma ofrecemos diferentes opciones para nuestros clientes.</p>
-
-    <h2>Café y bebidas</h2>
-    <p>Ofrecemos café caliente y bebidas frías.</p>
-
-    <h2>Postres</h2>
-    <p>Tenemos deliciosos postres para acompañar nuestras bebidas.</p>
-
-    <h2>Atención al cliente</h2>
-    <p>Queremos ofrecer un ambiente agradable para compartir.</p>
-
-    <a href="index.html">Volver al inicio</a>
-    </main>
-    <footer>
-    <p><strong>Cafetería Café Aroma</strong></p>
-    <p>Teléfono: Por agregar | Correo: Por agregar</p>
-    <p>&copy; 2026 Café Aroma. Todos los derechos reservados.</p>
-</footer>
+  </header>
+  <main>
+    <section class="pagina-encabezado contenedor"><p class="etiqueta">Lo que ofrecemos</p><h1>Nuestros servicios</h1><p>En Café Aroma ofrecemos opciones para disfrutar de una pausa deliciosa.</p></section>
+    <section class="contenido-pagina contenedor">
+      <div class="servicio-fila"><img src="img/cafe-aroma.png" alt="Taza de café"><div><h2>Café caliente</h2><p>Disfruta café recién preparado, ideal para comenzar el día o compartir una conversación.</p></div></div>
+      <div class="servicio-fila"><img src="img/cafe2.png" alt="Cappuccino"><div><h2>Bebidas frías y calientes</h2><p>Opciones para diferentes gustos y momentos, con sabores que acompañan tu día.</p></div></div>
+      <div class="servicio-fila"><img src="img/postres.png" alt="Postre de chocolate"><div><h2>Postres</h2><p>Deliciosos postres para complementar tu bebida favorita.</p></div></div>
+      <div class="llamado"><h2>¿Quieres saber más?</h2><p>Escríbenos y con gusto atenderemos tus consultas.</p><a class="boton" href="contacto.html">Contáctanos</a></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="footer-contenedor contenedor"><div><a class="logo logo-footer" href="index.html">Café Aroma</a><p>Café, postres y buenos momentos.</p></div><div class="redes"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></div><p class="copyright">© 2026 Café Aroma. Todos los derechos reservados.</p></div></footer>
 </body>
 </html>

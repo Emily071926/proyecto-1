@@ -1,41 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros | Café Aroma</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce la historia y misión de Café Aroma.">
+  <title>Nosotros | Café Aroma</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header>
-    <h1>Café Aroma</h1>
-    <button id="btnMenu" aria-label="Abrir menú">☰</button>
-    <nav id="menu">
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
+  <header class="header">
+    <a class="logo" href="index.html">Café Aroma</a>
+    <button class="hamburguesa" id="btnMenu" type="button" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu" aria-label="Menú principal">
+      <a href="index.html">Inicio</a><a href="nosotros.html" aria-current="page">Nosotros</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a>
     </nav>
-</header>
-   <main>
-    <h1>Sobre nosotros</h1>
-    <p>Bienvenidos a Café Aroma, una cafetería para disfrutar de un buen café.</p>
-
-    <h2>Nuestra historia</h2>
-    <p>Queremos ofrecer café, bebidas y una atención agradable a nuestros clientes.</p>
-
-    <h2>Nuestra misión</h2>
-    <p>Brindar productos de calidad en un ambiente acogedor.</p>
-
-    <a href="index.html">Volver al inicio</a>
-    </main>
-    
-<footer>
-    <p><strong>Cafetería Café Aroma</strong></p>
-    <p>Teléfono: Por agregar | Correo: Por agregar</p>
-    <p>&copy; 2026 Café Aroma. Todos los derechos reservados.</p>
-</footer>
-
+  </header>
+  <main>
+    <section class="pagina-encabezado contenedor"><p class="etiqueta">Conócenos</p><h1>Sobre nosotros</h1><p>Bienvenidos a Café Aroma, un espacio para disfrutar de un buen café y compartir momentos agradables.</p></section>
+    <section class="contenido-pagina contenedor dos-columnas">
+      <img class="imagen-destacada" src="img/cafe2.png" alt="Café cappuccino preparado con cuidado">
+      <div><h2>Nuestra historia</h2><p>Café Aroma nace como una propuesta para reunir a las personas alrededor de una taza de café, bebidas y postres en un ambiente acogedor.</p><h2>Nuestra misión</h2><p>Brindar productos de calidad y una atención amable, creando una experiencia agradable para cada visitante.</p><h2>Nuestra visión</h2><p>Ser un lugar reconocido por su ambiente cálido, sus bebidas y el buen trato a sus clientes.</p><a class="boton" href="servicios.html">Conoce nuestros servicios</a></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="footer-contenedor contenedor"><div><a class="logo logo-footer" href="index.html">Café Aroma</a><p>Café, postres y buenos momentos.</p></div><div class="redes"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></div><p class="copyright">© 2026 Café Aroma. Todos los derechos reservados.</p></div></footer>
 </body>
 </html>
